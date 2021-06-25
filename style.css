@@ -89,32 +89,4 @@ input[type=checkbox] {
      }
 }
 
-/* Social Pannel CSS */
 
-.social-panel-container {
-    position: fixed;
-    right: 0;
-    bottom: 80px;
-    transform: translateX(100%);
-    transition: transform 0.4s ease-in-out;
-}
-
-.social-panel-container.visible {
-        transform: translatex(-10px);
-}
-
-.social-panel {
-    background-color: #fff;
-    border-radius: 16px;
-    box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
-    border: 5px solid solid #001F61;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Multi';
-    position: relative;
-    height: 169px;
-    width: 370px;
-    max-width: calc(100%-10px)
-}
