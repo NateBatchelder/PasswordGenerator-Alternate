@@ -1,6 +1,12 @@
-/* This is the style sheet for the PasswordGenerator-Alternate Program */
-@import
-url('https://fonts.googleapis.com/css?family_Muli&display=swap');
+/* default font size in REM units */
+html {
+    font-size: 62.5%; 
+}
+
+/* modifies font size for divisions */
+span {
+    font-size: 1.6rem;
+}
 
 /* establishes the input filed */
 * {
@@ -8,23 +14,24 @@ url('https://fonts.googleapis.com/css?family_Muli&display=swap');
 }
 
 body {
-    background-color: #3b3b98;
-    Color: fff;
+    background-color: #9EA0A1;
+    Color: #282828;
     display: flex;
     font-family: 'Muli', sans-serif;
     flex-direction: column;
     align-items: center;
     justify-content: content;
-    padding: 10px;
+    padding: 1rem;
     min-height: 100vh;
 }
 
 p {
-    margin: 5px 0;
+    margin: 1rem 0;
+    font-size: 1.5rem;
 }
 
 h2 {
-   margin: 10px 0 20px;
+   margin: .5rem 0 1rem;
    text-align: center; 
 }
 
@@ -33,23 +40,23 @@ input[type=checkbox] {
 }
 
 .container {
-    background-color: #23235B;
-    box-shadow: 0px 2px 10px; rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    width: 350px;
+    background-color: #B7D9B1;
+    box-shadow: 0rem 5rem 7rem #282828;
+    padding: 10rem;
+    width: 50rem;
     max-width:100%;
 }
 
 .result-container {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #282828;
     display: flex;
     justify-content: flex start;
     align-items: center;
     position: relative;
-    font-size: 18px;
+    font-size: 1rem;
     letter-spacing: 1px;
-    padding: 12px 10px;
-    height: 50px;
+    padding: 1rem .25rem;
+    height: 2rem;
     width: 100%;
 }
 
@@ -59,21 +66,24 @@ input[type=checkbox] {
 }
 
 .result-container .btn {
-    font-size: 20px;
+    font-size: 1rem;
     position: absolute;
     top: 5px;
     right: 5px;
-    height: 40px;
-    width: 40px;
+    height: 3rem;
+    width: 3rem;
 }
 
-.btn {
+.includeUppercase,
+.includeLowercase,
+.includeNumbers,
+.includeSpecialCharacters
+ {
     border: none;
-    color: fff;
+    color: #282828;
     cursor: pointer;
-    font-size: 16px;
-    padding: 8px 12px;
-    background-color: #3b3b98;
+    font-size: 1rem;
+    padding: .5rem .75rem;
 }
 
 .setting {
@@ -83,10 +93,16 @@ input[type=checkbox] {
     margin: 15px 0;
 }
 
-@media screen and (max-width: 400px) {
+/* using REM values to define space when on smaller screens */
+@media (min-width: 85rem) {
+    .container {
+        width: 65rem;
+    }
+}
+    /* screen and (max-width: 400px) {
     .result-container {
             font-size: 14px;
      }
-}
+} */
 
 
