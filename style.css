@@ -3,11 +3,6 @@ html {
     font-size: 62.5%; 
 }
 
-/* modifies font size for divisions */
-span {
-    font-size: 1.6rem;
-}
-
 /* establishes the input filed */
 * {
     box-sizing: border-box;
@@ -30,9 +25,30 @@ p {
     font-size: 1.5rem;
 }
 
+h1 {
+    background-color: #FDF4E3;
+    display: flex;
+    justify-content: flex start;
+    align-items: center;
+    position: relative;
+    font-size: 3rem;
+    padding: 2rem .5rem;
+    height: 8rem;
+    width: 200%
+}
+
+
+
 h2 {
-   margin: .5rem 0 1rem;
-   text-align: center; 
+    background-color: #FDF4E3;
+    display: flex;
+    justify-content: flex start;
+    align-items: center;
+    position: relative;
+    font-size: 3rem;
+    padding: 2rem .5rem;
+    height: 8rem;
+    width: 200%
 }
 
 input[type=checkbox] {
@@ -62,7 +78,7 @@ input[type=checkbox] {
 
 .result-container #result {
     word-wrap: break-word;
-    max-width: calc(100% - 40px);
+    max-width: 80%
 }
 
 .result-container .btn {
