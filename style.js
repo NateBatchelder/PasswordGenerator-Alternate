@@ -13,9 +13,58 @@ const randomFunc = {
     lower: getRandomLower,
     upper: getRandomUpper,
     number: getRandomNumber,
-    symbol: getRandomSymbol
+    symbol: getRandomSymbol,
 };
 
+generateEl.addEventListner('click', () => {
+    const length = +lenghtEl.value;
+    const hasLower = includeLowercase.checked; 
+    const hasUpper = includeUppercase.checked;
+    const hasNumber = includeNumbers.checked;
+    const hasSymbol = includeSpecialCharacters.checked;
+
+   resultEl.innerText = generatePassword(
+       hasLower, 
+       hasUpper, 
+       hasNumber, 
+       hasSymbol, 
+       length
+    );
+});
+
+// Generate Password Function
+
+function generatePassword(lower, upper, number, symbol, length) {
+// inculde initial password variable
+// filter out unchecked types
+// loop over until length is met, using checked types
+
+    let yourNewPassword = '';
+
+    const typesCount = lower + uppper + number + symbol;
+
+// creates an array[] with the included objects {}
+    const typesArr = [{Lower}, {upper}, {number}, {symbol}].filter 
+        (item => Object.valules(item)[0]);
+
+// check to see if the varaible is requested by the user, if null, then return empty string
+
+        if(typesCount === 0) {
+        return '';
+        }
+
+        for (let i = 0; i < length; i += typesCount) {
+        typesArray.forEach(type => {
+            const funcName = Object.keys(type)[0];
+    
+        randomPassword += randomFunc[funcName]();
+        });
+
+    const yourNewPassword = randomPassword.slice(0, lenght);
+
+return yourNewPassword
+
+}
 
 // user options
 
@@ -24,7 +73,7 @@ function getRandomLower() {
 }
 
 
-function getRandomLower() {
+function getRandomUpper() {
     return String.fromCharCode(Math.floor(Math.random() * 26) +65);
 }
 
