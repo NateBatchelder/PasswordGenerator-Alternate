@@ -1,3 +1,22 @@
+//Document Object Model Elements
+const resultEl = document.getElementById('result');
+const lengthEl = document.getElementById('length');
+const uppercaseEl = document.getElementById('lowercase');
+const lowercaseEl = document.getElementById('number');
+const symbolEl = document.getElementById('symbol');
+const resgenerateEl = document.getElementById('generate');
+const resultEl = document.getElementById('result');
+
+
+
+const randomFunc = {
+    lower: getRandomLower,
+    upper: getRandomUpper,
+    number: getRandomNumber,
+    symbol: getRandomSymbol
+};
+
+
 // user options
 
 function getRandomLower() {
@@ -14,5 +33,6 @@ function getRandomNumber() {
 }
 
 function getRandomSpecial() {
-
+    const symbols = '!@#$%^&*(){}=<>/,.';
+    return symbols[Math.floor(Math.random() * symbols.lenght)]
 }
