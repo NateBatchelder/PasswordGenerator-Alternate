@@ -5,7 +5,7 @@ html {
 }
 
 /* the color and size of the UI for the password generator */
-.container {
+body {
     background-color: #B7D9B1;
     box-shadow: 0rem 5rem 7rem #282828;
     padding: 10rem;
@@ -24,28 +24,10 @@ h1 {
     font-size: 3rem;
     padding: 2rem .5rem;
     height: 8rem;
-    width: 100%;
+    width: 80%;
     border-radius: 1.5rem
 }
-
-/*  */
-h2 {
-    background-color: #f4f4f4;
-    color: #154889;
-    font-family:'Courier New', Courier, monospace;
-    display: flex;
-    justify-content: flex start;
-    align-items: center;
-    position: relative;
-    font-size: 3rem;
-    padding: 2rem .5rem;
-    height: 4rem;
-    width: 100%;
-    border-radius: 1.5rem
-}
-
-/*  */
-body {
+.body {
     background-color: #9EA0A1;
     Color: #282828;
     display: flex;
@@ -62,31 +44,46 @@ form {
     justify-content: flex start;
     align-items: center;
     position: relative;
-    font-size: 1rem;
-    padding: 0rem 0rem 0rem 0rem;
-    height: 8rem;
-    width: 100%;
+    font-size: 2rem;
+    padding: 2rem .5rem;
+    height: 20rem;
+    width: 80%;
     border-radius: 1.5rem   
 }
 
+.numberOfCharacters {
+    width: 100%;
+}
+
+.slider {
+     -webkit-appearance: none; 
+     appearance: none;
+     width: 100%;
+     height: 2rem;
+     background: #FDF4E3;
+     outline: none;
+     opacity: 1.0;
+     -webkit-transtion: .2s;
+     transition: opacity.2s;
+}
 
 /*  */
-p {
-    margin: 1rem 0;
-    font-size: 1.5rem;
+h2 {
+    background-color: #f4f4f4;
+    color: #154889;
+    font-family:'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: flex start;
+    align-items: center;
+    position: relative;
+    font-size: 3rem;
+    padding: 2rem .5rem;
+    height: 4rem;
+    width: 80%;
+    border-radius: 1.5rem
 }
 
-/* range selector for number of digtis 8-128 inclusive */
-input [type=range] {
-    margin-right: 0;
-}
-
-/* button select to allow character type in password */
-input [type=button] {
-    margin-right: 0;
-}
-
-
+/*  */
 .result-container {
     background-color: #282828;
     display: flex;
@@ -114,19 +111,19 @@ input [type=button] {
     width: 3rem;
 }
 
-.includeUppercase,
-.includeLowercase,
-.includeNumbers,
+.toIncludeUppercase,
+.toIncludeLowercase,
+.toIncludeNumbers,
 .includeSpecialCharacters
  {
     border: none;
     color: #282828;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 3rem;
     padding: .5rem .75rem;
 }
-/* 
-.setting {
+
+/* .flex-container {
     display: flex;
     justify-content: space-between;
     align-items: center;

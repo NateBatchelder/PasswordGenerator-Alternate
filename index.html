@@ -8,36 +8,36 @@
   <title>Password PasswordGenerator-Alternate</title>
   <link rel ="stylesheet" href="./style.css">
 </head>
-<body>
-  <section class="container">
-    <h1>Password Generator</h1>
-      <form>
-      <label for="numberOfCharacters">Number of Characters Included</label>
-      <input type="range" min="8" max="128" value="8"
-      id="number">
-      <input type="number" min="8" max="128" value="8"
-      id="characterQuantity">
 
+<body>
+    <section class="flex-container">
+      <h1>Password Generator</h1>
+        <form>  
+          <slider class="slidecontainer">Number of Characters Included
+            <input type="range" min="8" max="128" value="8" class="slider"
+            id="includeSpecialCharacters">
+          </slider>
       <!-- lables HTML <input type="checkbox"> -->
       <!-- Uppercase values -->
-      <input type="checkbox" id="upper">
-      <label for="toIncludeUppercase">Do you want to include Uppercase values?</label>
+          <input type="checkbox" id="upper">
+          <label for="toIncludeUppercase">Check to include Uppercase values?</label>
       
       <!-- Lowercase values -->
-      <input type="checkbox" id="lower">
-      <label for="toIncludeLowercase">Do you want to include Lowercase values?</label>
+          <input type="checkbox" id="lower">
+          <label for="toIncludeLowercase">Check to include Lowercase values?</label>
       
       <!-- Numerical values -->
-      <input type="checkbox" id="number">  
-      <label for="toIncludeNumbers">Do you want to include Numeric values?</label>
+          <input type="checkbox" id="number">  
+          <label for="toIncludeNumbers">Check to include Numeric values?</label>
       
       <!-- Special Character values -->
-      <input type="checkbox" id="special">  
-      <label for="toIncludeSpecialCharacters">Do you want to include Special Character values?</label>
+          <input type="checkbox" id="special">  
+          <label for="toIncludeSpecialCharacters">Checkto include Special Character values?</label>
       
-    </form>
-  <h2>password</h2>
-  </section>
+        </form>
+      <h2>password</h2>
+    </section>
 </body>
-<script src="./style.js"></script>
+
+<script src="./script.js"></script>
 </html>

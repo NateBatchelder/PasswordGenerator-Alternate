@@ -15,7 +15,7 @@ const randomFunc = {
 };
 
 generateEl.addEventListner('click', () => {
-    const length = +lenghtEl.value;
+    const passwordCharacterCount = +lenghtEl.value;
     const hasLower = toIncludeLowercase.checked; 
     const hasUpper = toIncludeUppercase.checked;
     const hasNumber = includeNumbers.checked;
@@ -26,7 +26,7 @@ generateEl.addEventListner('click', () => {
        hasUpper, 
        hasNumber, 
        hasSymbol, 
-       length
+       passwordCharacterCount
     );
 });
 
