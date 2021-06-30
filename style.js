@@ -7,19 +7,17 @@ const symbolEl = document.getElementById('symbol');
 const resgenerateEl = document.getElementById('generate');
 const resultEl = document.getElementById('result');
 
-
-
 const randomFunc = {
     lower: getRandomLower,
     upper: getRandomUpper,
     number: getRandomNumber,
-    symbol: getRandomSymbol,
+    special: getRandomSymbol,
 };
 
 generateEl.addEventListner('click', () => {
     const length = +lenghtEl.value;
-    const hasLower = includeLowercase.checked; 
-    const hasUpper = includeUppercase.checked;
+    const hasLower = toIncludeLowercase.checked; 
+    const hasUpper = toIncludeUppercase.checked;
     const hasNumber = includeNumbers.checked;
     const hasSymbol = includeSpecialCharacters.checked;
 
@@ -38,32 +36,22 @@ function generatePassword(lower, upper, number, symbol, length) {
 // inculde initial password variable
 // filter out unchecked types
 // loop over until length is met, using checked types
-
     let yourNewPassword = '';
-
     const typesCount = lower + uppper + number + symbol;
-
 // creates an array[] with the included objects {}
-    const typesArr = [{Lower}, {upper}, {number}, {symbol}].filter 
+    const typesArr = [{lower}, {upper}, {number}, {symbol}].filter 
         (item => Object.valules(item)[0]);
-
 // check to see if the varaible is requested by the user, if null, then return empty string
-
         if(typesCount === 0) {
         return '';
         }
-
         for (let i = 0; i < length; i += typesCount) {
         typesArray.forEach(type => {
             const funcName = Object.keys(type)[0];
-    
-        randomPassword += randomFunc[funcName]();
+            randomPassword += randomFunc[funcName]();
         });
-
-    const yourNewPassword = randomPassword.slice(0, lenght);
-
+    const yourNewPassword = randomPassword.slice(0, length);
 return yourNewPassword
-
 }
 
 // user options
@@ -82,5 +70,6 @@ function getRandomNumber() {
 
 function getRandomSpecial() {
     const symbols = '!@#$%^&*(){}=<>/,.';
-    return symbols[Math.floor(Math.random() * symbols.lenght)]
+    return symbols[Math.floor(Math.random() * length)];
+}
 }

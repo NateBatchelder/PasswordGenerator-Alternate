@@ -14,23 +14,30 @@
       <form>
       <label for="numberOfCharacters">Number of Characters Included</label>
       <input type="range" min="8" max="128" value="8"
-      id="characterAmountMinMax">
+      id="number">
       <input type="number" min="8" max="128" value="8"
-      id="characterAmountValue">
+      id="characterQuantity">
 
+      <!-- lables HTML <input type="checkbox"> -->
+      <!-- Uppercase values -->
+      <input type="checkbox" id="upper">
       <label for="toIncludeUppercase">Do you want to include Uppercase values?</label>
-      <input type="button" id="includeUppercase">
-
+      
+      <!-- Lowercase values -->
+      <input type="checkbox" id="lower">
       <label for="toIncludeLowercase">Do you want to include Lowercase values?</label>
-      <input type="button" id="includeLowercase">
-
+      
+      <!-- Numerical values -->
+      <input type="checkbox" id="number">  
       <label for="toIncludeNumbers">Do you want to include Numeric values?</label>
-      <input type="button" id="includeNumbers">
-
+      
+      <!-- Special Character values -->
+      <input type="checkbox" id="special">  
       <label for="toIncludeSpecialCharacters">Do you want to include Special Character values?</label>
-      <input type="button" id="includeSpecialCharacters">
+      
     </form>
   <h2>password</h2>
   </section>
 </body>
+<script src="./style.js"></script>
 </html>
